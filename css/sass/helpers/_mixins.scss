@@ -1,0 +1,63 @@
+/*
+** Media Query Mixin For Help Only
+** Demo Version Only For The Course
+*/
+
+
+@mixin minMedium {
+    @media (min-width: 992px){
+        @content;
+    }
+}
+
+
+
+/*
+** OverLay Mixin
+*/
+
+@mixin overlay { //  overlayوعاوزه اعمل عليه تأثير ال div اما بيكون عندى مثلا
+ 
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+
+/*
+** Prefix Mixin
+** Auto Add Prefixes to Properties
+*/
+
+@mixin prefixer ($property, $value, $prefixes: ()){
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+    
+}
+
+
+
+/*
+** Animation Mixin 
+** Auto Add Prefixes To Animation
+*/
+
+@mixin keyFrame($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}

@@ -1,0 +1,86 @@
+.header {
+    padding: 20px 0 ;
+    overflow: hidden;
+    border-bottom: 1px solid $greyColor;
+    .logo {
+        
+        position: relative;
+        
+        @media #{$minSmall} {
+            width: 100%;
+            float: none;
+            
+        }
+        
+         @media #{$minMedium} {
+            width: 30%;
+            float: $float-left;
+            text-align: $text-left; // هنا عملت reset
+            
+        }
+        
+        h1 {
+            
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        
+        
+    }
+    .navbar {
+        overflow: hidden;
+        background-color: $redColor;
+        border-radius: 15px;
+        
+        
+        @media #{$minSmall} {
+            width: 100%;
+            float: none;
+            margin-top: 30px;
+            
+           
+            
+        }
+        
+         @media #{$minMedium} {
+           width: 70%;
+           float: $float-left; 
+           margin-top: 1em;
+            
+        }
+        
+        
+        @media #{$maxMobile} {  // هنا عاوز اخفى ال Navbar 
+            display: block;
+            border-radius: 0;
+        }
+        
+        li {
+            width: 20%;//علشان هما 5 
+            float: $float-left;
+            font-size: 18px;
+            text-align: center;
+            
+            
+             @media #{$maxMobile} { 
+                 float: none;
+                 display: block;  // علشان يجى تحت بعضه 
+                 
+             }
+            
+            a {
+                display: block;
+                padding: 20px 10px;
+                color: #FFF;
+                
+                text-decoration: none;
+                &:hover {
+                    color: #DDD;
+                    
+                }
+            }
+            
+        }
+        
+    }
+}
